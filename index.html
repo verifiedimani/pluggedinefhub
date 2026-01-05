@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plugged‑In EFB Hub Store</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">𝑷𝒍𝒖𝒈𝒈𝒆𝒅‑𝑰𝒏 𝑬𝑭𝑩 𝑯𝒖𝒃 𝑺𝒕𝒐𝒓𝒆</div>
+  <div class="nav-links" id="nav">
+    <a href="index.html">Home</a>
+    <a href="store.html">Store</a>
+    <a href="proofs.html">Proofs</a>
+    <a href="about.html">About</a>
+  </div>
+  <div class="menu" onclick="toggle()">☰</div>
+</header>
+
+<section class="section notice">
+    <span>eFootball Community Advisory</span>
+    <h1>Verified Trading & Player Safety Notice</h1>
+    <p>Due to increasing account theft and scams, players are advised to use trusted, verified communities.</p>
+    <div class="meta">Issued: February 2021</div>
+
+    <div class="buttons">
+      <a class="btn primary" href="https://chat.whatsapp.com/LCkvq6ypAfGEiiUZR9meS1">Join Verified Group 1</a>
+      <a class="btn secondary" href="https://chat.whatsapp.com/LZlbZMvepV6EYFSI4aWHJo">Join Verified Group 2</a>
+      <a class="btn outline" href="https://wa.me/18437139006">Direct Message Admin</a>
+    </div>
+</section>
+
+<footer>
+Partners with Konami and eFootball™.
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/18437139006">💬</a>
+
+<script>
+function toggle(){
+  let n=document.getElementById("nav");
+  n.style.display = n.style.display==="block"?"none":"block";
+}
+
+const faders=document.querySelectorAll('.section, .card, .proof');
+const options={threshold:0.2};
+const observer=new IntersectionObserver((entries,observer)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){ entry.target.classList.add('show'); observer.unobserve(entry.target);}
+  });
+}, options);
+faders.forEach(fader=>observer.observe(fader));
+</script>
+
+</body>
+</html>

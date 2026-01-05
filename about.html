@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">𝑷𝒍𝒖𝒈𝒈𝒆𝒅‑𝑰𝒏 𝑬𝑭𝑩 𝑯𝒖𝒃 𝑺𝒕𝒐𝒓𝒆</div>
+   <div class="nav-links" id="nav">
+    <a href="index.html">Home</a>
+    <a href="store.html">Store</a>
+    <a href="proofs.html">Proofs</a>
+    <a href="about.html">About</a>
+  </div>
+  <div class="menu" onclick="toggle()">☰</div>
+</header>
+
+<section class="section">
+<h2>About This Platform</h2>
+<p class="meta fade-up">
+Independent eFootball trading community focused on transparency, verified groups, and direct communication.
+</p>
+<a class="btn primary fade-up" href="https://wa.me/18437139006">Contact</a>
+</section>
+
+<footer>Partners with Konami and eFootball™.</footer>
+
+<script>
+const faders=document.querySelectorAll('.section, .card, .proof');
+const observer=new IntersectionObserver((entries,observer)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){ entry.target.classList.add('show'); observer.unobserve(entry.target);}
+  });
+}, {threshold:0.2});
+faders.forEach(fader=>observer.observe(fader));
+</script>
+
+</body>
+</html>
